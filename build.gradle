@@ -23,8 +23,11 @@ dependencies {
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 	
 	//LangChain4j
-	implementation 'dev.langchain4j:langchain4j-open-ai-spring-boot-starter:1.14.1-beta24'
-	implementation 'dev.langchain4j:langchain4j-spring-boot-starter:1.14.1-beta24'
+	// El Motor (Versión para Spring Boot 4)
+	implementation 'dev.langchain4j:langchain4j-open-ai-spring-boot4-starter:1.14.1-beta24'
+
+	// El Volante (Versión para Spring Boot 4)
+	implementation 'dev.langchain4j:langchain4j-spring-boot4-starter:1.14.1-beta24'
 }
 
 tasks.named('test') {
