@@ -1,5 +1,4 @@
-package com.zairex.magic_cinema;
-import dev.langchain4j.service.AiServices;
+package com.zairex.magic_cinema.domain.service;
 import dev.langchain4j.service.UserMessage;
 import dev.langchain4j.service.V;
 import dev.langchain4j.service.spring.AiService;
@@ -8,7 +7,7 @@ import dev.langchain4j.service.spring.AiService;
 public interface MagicCinemaAIService {
     @UserMessage("""
             Generate a welcoming greeting to the managing movies platform called {{platform}}
-            use less than 120 characters and use enthusiastic tone
+            use less than 200 characters and use enthusiastic tone
             """)
     String generateGreeting(@V("platform") String platform);
 
