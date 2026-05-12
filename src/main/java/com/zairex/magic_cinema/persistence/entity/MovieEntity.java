@@ -18,8 +18,8 @@ public class MovieEntity {
     private Integer duration;
     @Column(nullable = false, length = 40)
     private String genre;
-    @Column(name = "realise_date")
-    private LocalDate realiseDate;
+    @Column(name = "release_date")
+    private LocalDate releaseDate;
     @Column(precision = 3, scale = 2)
     private BigDecimal clasification;
     @Column(nullable = false, length = 1)
@@ -45,8 +45,8 @@ public class MovieEntity {
         return genre;
     }
 
-    public LocalDate getRealiseDate() {
-        return realiseDate;
+    public LocalDate getReleaseDate() {
+        return releaseDate;
     }
 
     public BigDecimal getClasification() {
