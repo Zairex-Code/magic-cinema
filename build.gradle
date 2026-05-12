@@ -21,6 +21,13 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-webmvc'
 	testImplementation 'org.springframework.boot:spring-boot-starter-webmvc-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+	// JPA is like a ORM
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	// This run the container automatically
+	developmentOnly 'org.springframework.boot:spring-boot-docker-compose'
+	// is the conection with the database
+	runtimeOnly 'org.postgresql:postgresql'
 	
 	//LangChain4j
 	// El Motor (Versión para Spring Boot 4)
