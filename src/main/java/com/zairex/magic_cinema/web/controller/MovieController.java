@@ -1,7 +1,7 @@
 package com.zairex.magic_cinema.web.controller;
 
-import com.zairex.magic_cinema.persistence.crud.CrudMovieEntity;
-import com.zairex.magic_cinema.persistence.entity.MovieEntity;
+import com.zairex.magic_cinema.domain.dto.MovieDto;
+import com.zairex.magic_cinema.domain.service.MovieService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -9,15 +9,16 @@ import java.util.List;
 
 @RestController
 public class MovieController {
-    private final CrudMovieEntity crudMovieEntity;
+    private final MovieService movieService;
 
-    public MovieController(CrudMovieEntity crudMovieEntity) {
-        this.crudMovieEntity = crudMovieEntity;
+    public MovieController(MovieService movieService) {
+        this.movieService = movieService;
     }
 
+
     @GetMapping("/movies")
-    public List<MovieEntity> getAll(){
-        return (List<MovieEntity>) this.crudMovieEntity.findAll();
+    public List<MovieDto> getAll(){
+        return this.movieService.getAll();
 
     }
 }
