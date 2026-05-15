@@ -35,6 +35,10 @@ dependencies {
 
 	// El Volante (Versión para Spring Boot 4)
 	implementation 'dev.langchain4j:langchain4j-spring-boot4-starter:1.14.1-beta24'
+
+	//mapstruct
+	implementation 'org.mapstruct:mapstruct:1.6.3'
+	annotationProcessor 'org.mapstruct:mapstruct-processor:1.6.3'
 }
 
 tasks.named('test') {
