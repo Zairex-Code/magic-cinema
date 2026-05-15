@@ -7,7 +7,7 @@ import dev.langchain4j.service.spring.AiService;
 public interface MagicCinemaAIService {
     @UserMessage("""
             Generate a welcoming greeting to the managing movies platform called {{platform}}
-            use less than 150 characters and use enthusiastic tone
+            use less than 210 characters and use enthusiastic tone
             """)
     String generateGreeting(@V("platform") String platform);
 
